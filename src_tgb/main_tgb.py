@@ -140,6 +140,7 @@ def select_conv(state: State, var_name: str, value) -> None:
 
 def build_chat():
     with tgb.Page() as chat:
+        # Doc for chat control: https://docs.taipy.io/en/develop/manuals/userman/gui/viselements/generic/chat/
         tgb.chat(
             "{conversation}", users=users, on_action=send_message, sender_id="Human"
         )
